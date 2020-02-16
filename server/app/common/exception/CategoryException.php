@@ -12,6 +12,6 @@ namespace app\common\exception;
 class CategoryException extends BaseException
 {
     public $code = 404;
-    public $msg = '指定类目不存在，请检查类目ID';
+    public $msg = '指定商品分类不存在，请检查商品分类ID';
     public $errorCode = 20000;
 }

@@ -4,10 +4,10 @@
 namespace app\common\exception;
 
 
-use think\Config;
-use think\exception\Handle;
 use think\Log;
+use think\Config;
 use think\Request;
+use think\exception\Handle;
 
 class ExceptionHandler extends Handle
 {
@@ -27,7 +27,6 @@ class ExceptionHandler extends Handle
         }else{
             // 服务器异常
             $flag = Config::get('app_debug');
-            //config('app_debug')
             if($flag)
             {
                 return parent::render($e);

@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: zouxiaojie
- * Date: 2019/6/17
- * Time: 2:03 PM
- */
+
 
 namespace app\common\enum;
 

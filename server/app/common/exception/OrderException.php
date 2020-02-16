@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: zouxiaojie
- * Date: 2019/6/16
- * Time: 2:19 PM
- */
+
 
 namespace app\common\exception;
 

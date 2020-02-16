@@ -1,0 +1,15 @@
+{
+  "name": "mock",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "dependencies": {
+    "json-server": "^0.16.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "./node_modules/.bin/json-server --watch all.json --port 5566"
+  },
+  "author": "",
+  "license": "ISC"
+}

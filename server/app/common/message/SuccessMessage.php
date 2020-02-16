@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: zouxiaojie
- * Date: 2019/6/14
- * Time: 1:37 PM
- */
+
 
 namespace app\common\message;
 

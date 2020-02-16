@@ -8,8 +8,8 @@ class Index extends Base
 {
     public function index()
     {
-        return json([
-            'data' => 'success:api/v1.Index/index',
-        ], 200);
+        return [
+            'data' => 'success::api/v1.Index/index',
+        ];
     }
 }

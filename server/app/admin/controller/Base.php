@@ -8,5 +8,10 @@ use think\Controller;
 
 class Base extends Controller
 {
+    protected $menu = [];
 
+    public function _initialize()
+    {
+
+    }
 }

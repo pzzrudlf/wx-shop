@@ -5,7 +5,6 @@ namespace app\common\exception;
 
 
 use think\Exception;
-use Throwable;
 
 /**
  * 状态码：
@@ -36,7 +35,6 @@ class BaseException extends Exception
         if(!is_array($params))
         {
             return ;
-//            throw new Exception();
         }
         if(array_key_exists('code', $params))
         {
