@@ -6,7 +6,7 @@
  * Time: 3:36 PM
  */
 
-namespace app\common\library\exception;
+namespace app\common\exception;
 
 
 class ForbiddenException extends BaseException

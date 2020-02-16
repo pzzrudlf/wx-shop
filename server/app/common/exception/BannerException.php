@@ -6,10 +6,10 @@
  * Time: 8:08 AM
  */
 
-namespace app\common\library\exception;
+namespace app\common\exception;
 
 
-class BannerMissException extends BaseException
+class BannerException extends BaseException
 {
     public $code = 400;
     public $msg = '请求的Banner不存在';

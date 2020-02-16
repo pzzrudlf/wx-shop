@@ -1,52 +1,60 @@
 <?php
 
-namespace app\common\library\exception;
 
+namespace app\common\exception;
+
+
+use think\Config;
 use think\exception\Handle;
 use think\Log;
+use think\Request;
 
 class ExceptionHandler extends Handle
 {
     private $code;
     private $msg;
     private $errorCode;
+    private $request_url;
 
     public function render(\Exception $e)
     {
         if($e instanceof BaseException)
         {
+            // 用户异常
             $this->code = $e->code;
             $this->msg = $e->msg;
             $this->errorCode = $e->errorCode;
         }else{
-            if(config('app_debug'))
+            // 服务器异常
+            $flag = Config::get('app_debug');
+            //config('app_debug')
+            if($flag)
             {
                 return parent::render($e);
-            }
-            else
-            {
+            }else{
                 $this->code = 500;
-                $this->msg = '服务器内部错误';
+                $this->msg = '内部服务器错误';
                 $this->errorCode = 999;
                 $this->recordErrorLog($e);
             }
         }
-
+        $request = Request::instance();
+        $this->request_url = $request->url();
         $result = [
             'msg' => $this->msg,
             'error_code' => $this->errorCode,
-            'request_url' => request()->url(),//需要返回客户端当前请求的URL
+            'request_url' => $this->request_url,
         ];
-
         return json($result, $this->code);
     }
 
     private function recordErrorLog(\Exception $e)
     {
+        // 开启log
         Log::init([
             'type' => 'File',
             'path' => LOG_PATH,
-            'level' => ['level'],
+            'level' => ['error'],
         ]);
         Log::record($e->getMessage(), 'error');
     }

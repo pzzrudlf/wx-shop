@@ -6,7 +6,7 @@
  * Time: 1:37 PM
  */
 
-namespace app\common\library\exception;
+namespace app\common\message;
 
 
 class SuccessMessage

@@ -6,7 +6,7 @@
  * Time: 7:46 PM
  */
 
-namespace app\common\library\exception;
+namespace app\common\exception;
 
 
 class ProductException extends BaseException

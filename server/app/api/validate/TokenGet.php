@@ -1,15 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: zouxiaojie
- * Date: 2019/6/13
- * Time: 2:30 PM
- */
-
-namespace app\common\library\exception;
 
 
-use app\api\validate\BaseValidate;
+namespace app\api\validate;
+
 
 class TokenGet extends BaseValidate
 {

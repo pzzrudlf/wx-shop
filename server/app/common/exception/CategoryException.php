@@ -6,7 +6,7 @@
  * Time: 9:23 PM
  */
 
-namespace app\common\library\exception;
+namespace app\common\exception;
 
 
 class CategoryException extends BaseException

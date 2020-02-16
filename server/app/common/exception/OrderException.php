@@ -6,7 +6,7 @@
  * Time: 2:19 PM
  */
 
-namespace app\common\library\exception;
+namespace app\common\exception;
 
 
 class OrderException extends BaseException

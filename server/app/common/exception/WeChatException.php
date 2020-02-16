@@ -6,7 +6,7 @@
  * Time: 3:30 PM
  */
 
-namespace app\common\library\exception;
+namespace app\common\exception;
 
 
 class WeChatException extends BaseException

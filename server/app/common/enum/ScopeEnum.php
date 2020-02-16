@@ -6,7 +6,7 @@
  * Time: 3:25 PM
  */
 
-namespace app\common\library\enum;
+namespace app\common\enum;
 
 
 class ScopeEnum
