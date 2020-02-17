@@ -15,7 +15,8 @@ return [
     // 服务器地址
     'hostname'        => '127.0.0.1',
     // 数据库名
-    'database'        => 'studyfoxminishop',
+//    'database'        => 'studyfoxminishop',
+    'database'        => 'zerg',
     // 用户名
     'username'        => 'root',
     // 密码
@@ -27,7 +28,7 @@ return [
     // 数据库连接参数
     'params'          => [],
     // 数据库编码默认采用utf8
-    'charset'         => 'utf8',
+    'charset'         => 'utf8mb4',
     // 数据库表前缀
     'prefix'          => '',
     // 数据库调试模式
@@ -45,11 +46,11 @@ return [
     // 是否严格检查字段是否存在
     'fields_strict'   => true,
     // 数据集返回类型
-    'resultset_type'  => 'array',
+    'resultset_type'  => 'collection',
     // 自动写入时间戳字段
-    'auto_timestamp'  => false,
+    'auto_timestamp'  => true,
     // 时间字段取出后的默认时间格式
     'datetime_format' => 'Y-m-d H:i:s',
     // 是否需要进行SQL性能分析
-    'sql_explain'     => false,
+    'sql_explain'     => true,
 ];
