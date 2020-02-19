@@ -15,22 +15,22 @@ Route::group('api/:version', function(){
     # 根据name获取Banner
     # /banner/name/b-1
     # b-1 || b-2
-    Route::get('/banner/name/:name', 'api/:version.Demo/getBannerByName', [], ['name' => '\w+']);
+    Route::get('/banner/name/:name', 'api/:version.Demo/getBannerByName', [], []);
     # 获取一组专题
     # /theme/by/names?names=t-1,t-2,t-3,t-4,t-5,t-6
     Route::get('/theme/by/names', 'api/:version.Demo/getThemesByName');
     # 获取单个专题的详情（含Spu数据）
     # /theme/name/t-1/with_spu
     # t-1 t-2 t-3 t-4 t-5 t-6
-    Route::get('/theme/name/:name/with_spu', 'api/:version.Demo/getThemeByName', [], ['name' => '\w+']);
+    Route::get('/theme/name/:name/with_spu', 'api/:version.Demo/getThemeWithSpuByName', [], []);
     # 获取活动(不包含优惠券数据)
     # /activity/name/a-2
     # a-1 || a-2
-    Route::get('/activity/name/:name', 'api/:version.Demo/getActivityByName', [], ['name' => '\w+']);
+    Route::get('/activity/name/:name', 'api/:version.Demo/getActivityByName', [], []);
     # 获取活动（携带优惠券数据）
     # /activity/name/t-4/with_spu
     # t-4
-    Route::get('/activity/name/:name/with_spu', 'api/:version.Demo/getActivityByNameWithSpu', [], ['name' => '\w+']);
+    Route::get('/activity/name/:name/with_spu', 'api/:version.Demo/getActivityByNameWithSpu', [], []);
     /**
      * 获取某个二级分类的可用优惠券
      * /coupon/by/category/2
@@ -110,4 +110,13 @@ Route::group('api/:version', function(){
      * 32
      */
     Route::get('/spu/by/category/:id', 'api/:version.Demo/getSpuProductByCategoryID', [], ['id' => '\d+']);
+});
+
+
+Route::group('admin', function(){
+    Route::get('/', 'admin/index/index');
+    Route::get('/index', 'admin/index/index');
+    Route::get('/index/index', 'admin/index/index');
+    Route::rule('/auth/login', 'admin/auth/login', 'GET|POST');
+    Route::get('/auth/logout', 'admin/auth/logout');
 });

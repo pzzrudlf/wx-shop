@@ -1,11 +1,7 @@
 <?php
 
 return [
-//    'default_return_type'    => 'html',
     'template' => [
-//        'layout_on' => true,
-//        'layout_name' => 'layouts/main',
-//        'layout_item'   => '{{__CONTENT__}}',
         'tpl_begin'    => '{{',
         // 模板引擎普通标签结束标记
         'tpl_end'      => '}}',

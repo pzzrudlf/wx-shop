@@ -14,7 +14,7 @@ Page({
    */
   onLoad: function (options) {
     wx.request({
-      url: `${config.appBaseUrl}theme`,
+      url: `${config.appBaseUrl}/theme/by/names`,
       method: 'GET',
       data : {
         names : 't-1',

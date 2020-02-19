@@ -1,5 +1,5 @@
 const config = {
-    appKey : '',
+    appKey : 'demoKey',
     appBaseUrl : 'http://wx-mini-shop.dev.com/api/v1',
 }
 
