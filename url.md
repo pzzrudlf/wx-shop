@@ -22,4 +22,4 @@
     
 * 获取活动（携带优惠券数据）
 
-    [/activity/name/{name}/with_spu](http://wx-mini-shop.dev.com/api/v1/activity/name/{name}/with_spu)    
+    [/activity/name/a-2/with_spu](http://wx-mini-shop.dev.com/api/v1/activity/name/a-2/with_spu)    

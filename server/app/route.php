@@ -96,7 +96,7 @@ Route::group('api/:version', function(){
     /**
      * Spu 商品
      * 获取商品详情
-     * /spu/id/12/detail
+     * /spu/id/2/detail
      */
     Route::get('/spu/id/:id/detail', 'api/:version.Demo/getSpuProductByID', [], ['id' => '\d+']);
     /**
