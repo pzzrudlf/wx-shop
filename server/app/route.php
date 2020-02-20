@@ -2,9 +2,7 @@
 use think\Route;
 //Route::rule('路由表达式','路由地址','请求类型','路由参数（数组）','变量规则（数组）');
 Route::get('/', function(){
-    return json([
-        'msg' => '你好',
-    ]);
+    header("location:http://wx-mini-shop.dev.com/admin");
 });
 
 Route::group('api/:version', function(){
