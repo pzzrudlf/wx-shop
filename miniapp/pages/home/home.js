@@ -1,35 +1,36 @@
-import {config} from "../../config/config";
 // pages/home/home.js
+import {Theme} from "../../model/theme";
+import {Banner} from "../../model/banner";
+import {Category} from "../../model/category";
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    topTheme: null,
+    themeA: null,
+    bannerB: null,
+    grid: [],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-    wx.request({
-      url: `${config.appBaseUrl}/theme/by/names`,
-      method: 'GET',
-      data : {
-        names : 't-1',
-      },
-      header: {
-        appKey: config.appKey
-      },
-      success: (res) => {
-        this.setData({
-          topTheme: res.data[0],
-        })
-      }
-    })
+  async onLoad(options) {
+    this.initAllData()
   },
 
+  async initAllData() {
+    const themeA = await Theme.getHomeLocationA()
+    const bannerB = await Banner.getHomeLocationB()
+    const grid = await Category.getGridCategory()
+    this.setData({
+      themeA: themeA[0],
+      bannerB,
+      grid
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

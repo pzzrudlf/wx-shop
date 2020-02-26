@@ -4,33 +4,33 @@ namespace app\common\wechat\pay;
 use think\Loader;
 
 //require_once "WxPay.Config.Interface.php";
-Loader::import('wxpay.WxPay', EXTEND_PATH, '.Api.php');
+Loader::import('wechat.WxPay', EXTEND_PATH, '.Api.php');
 
 class WxPayConfig extends \WxPayConfigInterface
 {
 	public function GetAppId()
 	{
-		return config('wxpay.app_id');
+		return config('wechat.app_id');
 	}
 
     public function GetAppSecret()
     {
-        return config('wxpay.app_secret');
+        return config('wechat.app_secret');
     }
 
 	public function GetMerchantId()
 	{
-		return config('wxpay.mch_id');
+		return config('wechat.mch_id');
 	}
 
     public function GetKey()
     {
-        return config('wxpay.mch_key');
+        return config('wechat.mch_key');
     }
 
 	public function GetNotifyUrl()
 	{
-		return config("wxpay.notify_url");
+		return config("wechat.notify_url");
 	}
 
 	public function GetSignType()

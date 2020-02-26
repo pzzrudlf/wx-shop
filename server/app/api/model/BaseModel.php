@@ -29,5 +29,15 @@ class BaseModel extends Model
      * hasManyThrough('关联模型名','中间模型名','外键名','中间模型关联键名','当前模型主键名',['模型别名定义']);
      */
 
+    protected $hidden = ['delete_time', 'update_time'];
 
+    protected function img_prefix($value, $data)
+    {
+        $temp = $value;
+        if($data['from'] == 1)
+        {
+            $temp = config('setting.img_prefix').$value;
+        }
+        return $temp;
+    }
 }
