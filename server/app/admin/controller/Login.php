@@ -7,11 +7,11 @@ use think\Controller;
 use app\admin\validate\AuthValidate;
 use app\admin\model\Admin as AdminModel;
 
-class Auth extends Controller
+class Login extends Controller
 {
     const SESSION_KEY = 'admin_id';
 
-    public function login()
+    public function index()
     {
         if(session(self::SESSION_KEY))
         {
@@ -41,9 +41,4 @@ class Auth extends Controller
         return $this->fetch();
     }
 
-    public function logout()
-    {
-        session(self::SESSION_KEY, null);
-        $this->redirect('/admin/auth/login');
-    }
 }

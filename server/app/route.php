@@ -1,10 +1,23 @@
 <?php
+//use think\Url;
+//think\Url::root('index.php?s=');
 use think\Route;
 //Route::rule('路由表达式','路由地址','请求类型','路由参数（数组）','变量规则（数组）');
 Route::get('/', function(){
     header("location:http://wx-mini-shop.dev.com/admin");
 });
+Route::get('/demo', 'api/v1.Banner/demo');
+// 后台管理模块
+Route::group('admin', function(){
+    Route::get('/', 'admin/index/index');
+    Route::get('/index', 'admin/index/index');
+    Route::get('/index/index', 'admin/index/index');
+    Route::rule('/login/index', 'admin/login/index', 'GET|POST');
+    Route::get('/logout/index', 'admin/logout/index');
+    Route::get('/ad/index', 'admin/ad/index');
+});
 
+// 前台api模块
 Route::group('api/:version', function(){
     # 根据ID获取Banner
     # /banner/id/1
@@ -108,13 +121,4 @@ Route::group('api/:version', function(){
      * 32
      */
     Route::get('/spu/by/category/:id', 'api/:version.Demo/getSpuProductByCategoryID', [], ['id' => '\d+']);
-});
-
-
-Route::group('admin', function(){
-    Route::get('/', 'admin/index/index');
-    Route::get('/index', 'admin/index/index');
-    Route::get('/index/index', 'admin/index/index');
-    Route::rule('/auth/login', 'admin/auth/login', 'GET|POST');
-    Route::get('/auth/logout', 'admin/auth/logout');
 });

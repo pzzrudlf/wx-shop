@@ -15,7 +15,7 @@ class Base extends Controller
         if(!$this->isLogin())
         {
             //没有登陆
-            $this->redirect('/admin/auth/login');
+            $this->redirect('/admin/login/index');
         }
         //登陆成功
         $admin_id = session(self::SESSION_KEY);

@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "lin-ui": "~0.6.0"
+    "lin-ui": "~0.6.0",
+    "matrixjs": "^1.0.2"
   },
   "author": "",
   "license": "ISC"
