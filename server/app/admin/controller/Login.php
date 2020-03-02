@@ -29,15 +29,14 @@ class Login extends Controller
                $query->where(['username' => $username, 'password' => $password]);
             });
 
-            if(!$admin)
+            if(empty($admin))
             {
                 $this->error('账号有误，请重新填写账号密码！');
             }
+            session(null);
             session(self::SESSION_KEY, $admin->id);
-
             $this->redirect('/admin/index/index');
         }
-
         return $this->fetch();
     }
 

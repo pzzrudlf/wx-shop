@@ -1,1 +1,5 @@
-/* components/fence/index.wxss */
+.row-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

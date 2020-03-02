@@ -9,8 +9,58 @@
 {{/block}}
 {{block name="body"}}
 <div class="row">
-
-</div>
+        <div class="col-xs-12">
+            <div class="box">
+                <div class="box-header">
+                    <h3 class="box-title">管理员</h3>
+                </div>
+                <div class="box-body">
+                    <div id="example1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+                        <div class="row">
+                            <div class="col-sm-12" style="margin-bottom: 6px;">
+                                <button class="btn btn-info" style="background-color: #337AB7;">创建</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <table id="example1" class="table table-bordered table-striped dataTable" role="grid" aria-describedby="example1_info">
+                                    <thead>
+                                    <tr role="row">
+                                        <th class="sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1">id</th>
+                                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1">用户名</th>
+                                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1">昵称</th>
+                                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1">创建时间</th>
+                                        <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1">操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {{volist name="admin" id="item"}}
+                                    <tr role="row" class="odd">
+                                        <td>{{$item.id}}</td>
+                                        <td>{{$item.username}}</td>
+                                        <td>{{$item.nickname}}</td>
+                                        <td>{{$item.create_time}}1</td>
+                                        <td>
+                                            <button class="btn btn-info" style="background-color: #337AB7;">查看</button>
+                                            <button class="btn btn-info" style="background-color: #337AB7;">修改</button>
+                                            <button class="btn btn-info" style="background-color: #337AB7;">删除</button>
+                                        </td>
+                                    </tr>
+                                    {{/volist}}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                {{$admin->render()}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 {{/block}}
 {{block name="js"}}
 <script>

@@ -3,18 +3,51 @@
 //think\Url::root('index.php?s=');
 use think\Route;
 //Route::rule('路由表达式','路由地址','请求类型','路由参数（数组）','变量规则（数组）');
+//301 重定向到后台管理系统
 Route::get('/', function(){
     header("location:http://wx-mini-shop.dev.com/admin");
 });
-Route::get('/demo', 'api/v1.Banner/demo');
+//Route::get('/demo', 'api/v1.Banner/demo');
 // 后台管理模块
 Route::group('admin', function(){
-    Route::get('/', 'admin/index/index');
-    Route::get('/index', 'admin/index/index');
-    Route::get('/index/index', 'admin/index/index');
-    Route::rule('/login/index', 'admin/login/index', 'GET|POST');
-    Route::get('/logout/index', 'admin/logout/index');
-    Route::get('/ad/index', 'admin/ad/index');
+//    后台首页
+    Route::get('/', 'admin/Index/index');
+    Route::get('/index', 'admin/Index/index');
+    Route::get('/index/index', 'admin/Index/index');
+//    登录
+    Route::rule('/login/index', 'admin/Login/index', 'GET|POST');
+//    登出
+    Route::get('/logout/index', 'admin/Logout/index');
+//    Admin
+    Route::get('/admin/index', 'admin/Admin/index');
+    Route::get('/admin/view/:id', 'admin/Admin/view');
+    Route::rule('/admin/create', 'admin/Admin/create', 'GET|POST');
+    Route::rule('/admin/edit/:id', 'admin/Admin/edit', 'GET|POST');
+    Route::post('/admin/delete/:id', 'admin/Admin/delete');
+//   角色
+    Route::get('/role/index', 'admin/Role/index');
+    Route::get('/role/view/:id', 'admin/Role/view');
+    Route::rule('/role/create', 'admin/Role/create', 'GET|POST');
+    Route::rule('/role/edit/:id', 'admin/Role/edit', 'GET|POST');
+    Route::post('/role/delete/:id', 'admin/Role/delete');
+//    权限
+    Route::get('/permission/index', 'admin/Permission/index');
+    Route::get('/permission/view/:id', 'admin/Permission/view');
+    Route::rule('/permission/create', 'admin/Permission/create', 'GET|POST');
+    Route::rule('/permission/edit/:id', 'admin/Permission/edit', 'GET|POST');
+    Route::post('/permission/delete/:id', 'admin/Permission/delete');
+//    Banner
+    Route::get('/banner/index', 'admin/Banner/index');
+    Route::get('/banner/view/:id', 'admin/Banner/view');
+    Route::rule('/banner/create', 'admin/Banner/create', 'GET|POST');
+    Route::rule('/banner/edit/:id', 'admin/Banner/edit', 'GET|POST');
+    Route::post('/banner/delete/:id', 'admin/Banner/delete');
+//    Category
+    Route::get('/category/index', 'admin/Category/index');
+    Route::get('/category/view/:id', 'admin/Category/view');
+    Route::rule('/category/create', 'admin/Category/create', 'GET|POST');
+    Route::rule('/category/edit/:id', 'admin/Category/edit', 'GET|POST');
+    Route::post('/category/delete/:id', 'admin/Category/delete');
 });
 
 // 前台api模块

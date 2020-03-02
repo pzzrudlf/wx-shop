@@ -20,11 +20,12 @@ class ExceptionHandler extends Handle
     {
         if($e instanceof BaseException)
         {
-            // 用户异常
+            // 用户自定义异常类
             $this->code = $e->code;
             $this->msg = $e->msg;
             $this->errorCode = $e->errorCode;
         }else{
+            // 框架内部异常类
             // 服务器异常
             $flag = Config::get('app_debug');
             if($flag)
