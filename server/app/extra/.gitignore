@@ -1,7 +1,8 @@
 *
-!upload_qiniu.php
-!upload_local.php
 !data.json
 !data.php
+!db.sql
+!upload_qiniu.php
+!upload_local.php
 !setting.php
 !.gitignore

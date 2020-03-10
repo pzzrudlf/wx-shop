@@ -30,6 +30,9 @@ class BaseModel extends Model
      */
 
     protected $hidden = ['delete_time', 'update_time'];
+    protected $autoWriteTimestamp = true;
+    protected $createTime = 'create_time';
+    protected $updateTime = 'update_time';
 
     protected function img_prefix($value, $data)
     {

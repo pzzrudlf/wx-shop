@@ -33,7 +33,6 @@ class UserToken extends Token
             {
                 $this->handleErr($wechat_res);
             }else{
-//                $this->grantToken($wechat_res);
                 return $this->grantToken($wechat_res);
             }
         }

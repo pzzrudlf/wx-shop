@@ -56,6 +56,10 @@ Route::group('admin', function(){
 
 // 前台api模块
 Route::group('api/:version', function(){
+
+    Route::post('/token/user', 'api/:version.Token/getUserToken');
+    Route::post('/token/app', 'api/:version.Token/getAppToken');
+    Route::post('/token/verify', 'api/:version.Token/verifyToken');
     # 根据ID获取Banner
     # /banner/id/1
     # 1
