@@ -1,5 +1,6 @@
 *
-!upload.php
+!upload_qiniu.php
+!upload_local.php
 !data.json
 !data.php
 !setting.php
