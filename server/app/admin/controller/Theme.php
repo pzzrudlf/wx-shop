@@ -4,16 +4,16 @@
 namespace app\admin\controller;
 
 
-class Banner extends Base
+class Theme extends Base
 {
     public function index()
     {
-        $banners = [];
+        $themes = [];
         for($i=0;$i<10;$i++)
         {
-            $banners[] = $i;
+            $themes[] = $i;
         }
-        $this->assign('banners', $banners);
+        $this->assign('themes', $themes);
         return $this->fetch();
     }
 }

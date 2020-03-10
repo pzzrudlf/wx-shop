@@ -14,13 +14,11 @@ Route::group('admin', function(){
     Route::get('/', 'admin/Index/index');
     Route::get('/index', 'admin/Index/index');
     Route::get('/index/index', 'admin/Index/index');
-//    登录
     Route::rule('/login/index', 'admin/Login/index', 'GET|POST');
-//    登出
     Route::get('/logout/index', 'admin/Logout/index');
 //    Admin
     Route::get('/admin/index', 'admin/Admin/index');
-    Route::get('/admin/view/:id', 'admin/Admin/view');
+    Route::get('/admin/view/id/:id', 'admin/Admin/view');
     Route::rule('/admin/create', 'admin/Admin/create', 'GET|POST');
     Route::rule('/admin/edit/:id', 'admin/Admin/edit', 'GET|POST');
     Route::post('/admin/delete/:id', 'admin/Admin/delete');
@@ -42,6 +40,12 @@ Route::group('admin', function(){
     Route::rule('/banner/create', 'admin/Banner/create', 'GET|POST');
     Route::rule('/banner/edit/:id', 'admin/Banner/edit', 'GET|POST');
     Route::post('/banner/delete/:id', 'admin/Banner/delete');
+//    Theme
+    Route::get('/theme/index', 'admin/Theme/index');
+    Route::get('/theme/view/:id', 'admin/Theme/view');
+    Route::rule('/theme/create', 'admin/Theme/create', 'GET|POST');
+    Route::rule('/theme/edit/:id', 'admin/Theme/edit', 'GET|POST');
+    Route::post('/theme/delete/:id', 'admin/Theme/delete');
 //    Category
     Route::get('/category/index', 'admin/Category/index');
     Route::get('/category/view/:id', 'admin/Category/view');

@@ -52,7 +52,7 @@ class Admin extends Base
             {
                 throw new Exception($adminModel->error);
             }
-            $this->redirect('admin/view', ['id' => $id], 200);
+            $this->redirect(url('admin/view'), ['id' => $id], 200);
         }
         $this->assign('adminModel', $adminModel);
         return $this->fetch();

@@ -11,8 +11,8 @@
 <section class="content-header">
     <h1>管理系统</h1>
     <ol class="breadcrumb">
-        <li><a href="#"><i class="fa fa-dashboard"></i> Banner管理</a></li>
-        <li class="active">Banner列表</li>
+        <li><a href="#"><i class="fa fa-dashboard"></i> Theme管理</a></li>
+        <li class="active">Theme列表</li>
     </ol>
 </section>
 <section class="content" id="showcontent">
@@ -20,7 +20,7 @@
         <div class="col-md-12">
             <div class="box box-primary">
                 <div class="box-header">
-                    <h3 class="box-title">Banner列表</h3>
+                    <h3 class="box-title">Theme列表</h3>
                     <div class="box-tools">
                         <div class="input-group input-group-sm" style="width: 150px;">
                             <input type="text" name="table_search" class="form-control pull-right"
@@ -43,7 +43,7 @@
                             <th>创建时间</th>
                             <th>操作事项</th>
                         </tr>
-                        {{volist name="banners" id="item"}}
+                        {{volist name="themes" id="item"}}
                         <tr>
                             <td>1</td>
                             <td>首页轮播</td>
@@ -79,8 +79,8 @@
 <script>
 // 激活菜单栏
 $(document).ready(function () {
-    $("#m-1").addClass('active');
-    $("#m-1-1").addClass('active');
+    $("#m-2").addClass('active');
+    $("#m-2-1").addClass('active');
 })
 </script>
 {{/block}}

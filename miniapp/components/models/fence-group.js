@@ -1,4 +1,4 @@
-import {Matrix} from "../../models/matrix";
+import {Matrix} from "./matrix";
 import {Fence} from "./fence";
 
 class FenceGroup{

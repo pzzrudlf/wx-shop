@@ -2,43 +2,61 @@
 <aside class="main-sidebar">
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
-        <!-- Sidebar user panel -->
-        <div class="user-panel">
-            <div class="pull-left image">
-                <img src="__ADMIN__/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
-            </div>
-            <div class="pull-left info">
-                <p>Alexander Pierce</p>
-                <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
-            </div>
-        </div>
-        <!-- search form -->
-        <form action="#" method="get" class="sidebar-form">
-            <div class="input-group">
-                <input type="text" name="q" class="form-control" placeholder="Search...">
-                <span class="input-group-btn">
-                <button type="submit" name="search" id="search-btn" class="btn btn-flat">
-                  <i class="fa fa-search"></i>
-                </button>
-              </span>
-            </div>
-        </form>
-        <!-- /.search form -->
         <!-- sidebar menu: : style can be found in sidebar.less -->
         <ul class="sidebar-menu" data-widget="tree">
-            <li class="header">主导航</li>
-            <li class="active treeview menu-open">
+            <li class="treeview menu-close">
+                <a href="{{:url('index/index')}}">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                    <span>控制面板</span>
+                </a>
+            </li>
+            <li class="treeview menu-close" id="m-1">
                 <a href="#">
-                    <i class="fa fa-circle-o"></i> <span>广告管理</span>
+                    <i class="fa fa-circle-o"></i> <span>Banner管理</span>
                     <span class="pull-right-container">
                         <i class="fa fa-angle-left pull-right"></i>
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{:url('banner/index')}}"><i class="fa fa-circle-o"></i>广告列表</a></li>
+                    <li id="m-1-1"><a href="{{:url('banner/index')}}"><i class="fa fa-circle-o"></i>Banner列表</a></li>
                 </ul>
             </li>
-            <li class="treeview menu-close">
+            <li class="treeview menu-close" id="m-2">
+                <a href="#">
+                    <i class="fa fa-circle-o"></i> <span>Theme管理</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li id="m-2-1"><a href="{{:url('theme/index')}}"><i class="fa fa-circle-o"></i>Theme列表</a></li>
+                </ul>
+            </li>
+            <li class="treeview menu-close" id="m-3">
+                <a href="#">
+                    <i class="fa fa-circle-o"></i> <span>商品分类管理</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li id="m-3-1"><a href="{{:url('category/index')}}"><i class="fa fa-circle-o"></i>商品分类列表</a></li>
+                    <li id="m-3-2"><a href="{{:url('spec/index')}}"><i class="fa fa-circle-o"></i>规格列表</a></li>
+                </ul>
+            </li>
+            <li class="treeview menu-close" id="m-4">
+                <a href="#">
+                    <i class="fa fa-circle-o"></i> <span>商品管理</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li id="m-4-1"><a href="{{:url('product/index')}}"><i class="fa fa-circle-o"></i>商品列表</a></li>
+                    <li id="m-4-2"><a href="{{:url('product_image/index')}}"><i class="fa fa-circle-o"></i>商品图片</a></li>
+                </ul>
+            </li>
+            <li class="treeview menu-close" id="m-5">
                 <a href="#">
                     <i class="fa fa-circle-o"></i> <span>用户管理</span>
                     <span class="pull-right-container">
@@ -46,10 +64,22 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{:url('user/index')}}"><i class="fa fa-circle-o"></i>用户列表</a></li>
+                    <li id="m-5-1"><a href="{{:url('user/index')}}"><i class="fa fa-circle-o"></i>用户列表</a></li>
+                    <li id="m-5-2"><a href="{{:url('user_address/index')}}"><i class="fa fa-circle-o"></i>用户地址</a></li>
                 </ul>
             </li>
-            <li class="treeview menu-close">
+            <li class="treeview menu-close" id="m-6">
+                <a href="#">
+                    <i class="fa fa-circle-o"></i> <span>订单管理</span>
+                    <span class="pull-right-container">
+                        <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                    <li id="m-6-1"><a href="{{:url('order/index')}}"><i class="fa fa-circle-o"></i>订单列表</a></li>
+                </ul>
+            </li>
+            <li class="treeview menu-close" id="m-7">
                 <a href="#">
                     <i class="fa fa-circle-o"></i> <span>系统设置</span>
                     <span class="pull-right-container">
@@ -57,34 +87,9 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li><a href="{{:url('admin/index')}}"><i class="fa fa-circle-o"></i>管理员列表</a></li>
-                    <li><a href="{{:url('role/index')}}"><i class="fa fa-circle-o"></i>角色列表</a></li>
-                    <li><a href="{{:url('permissioin/index')}}"><i class="fa fa-circle-o"></i>权限列表</a></li>
-                </ul>
-            </li>
-            <li class="treeview">
-                <a href="#">
-                    <i class="fa fa-edit"></i> <span>Forms</span>
-                    <span class="pull-right-container">
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li><a href="__ADMIN__/pages/forms/general.html"><i class="fa fa-circle-o"></i> General Elements</a></li>
-                    <li><a href="__ADMIN__/pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
-                    <li><a href="__ADMIN__/pages/forms/editors.html"><i class="fa fa-circle-o"></i> Editors</a></li>
-                </ul>
-            </li>
-            <li class="treeview">
-                <a href="#">
-                    <i class="fa fa-table"></i> <span>Tables</span>
-                    <span class="pull-right-container">
-                            <i class="fa fa-angle-left pull-right"></i>
-                        </span>
-                </a>
-                <ul class="treeview-menu">
-                    <li><a href="__ADMIN__/pages/tables/simple.html"><i class="fa fa-circle-o"></i> Simple tables</a></li>
-                    <li><a href="__ADMIN__/pages/tables/data.html"><i class="fa fa-circle-o"></i> Data tables</a></li>
+                    <li id="m-7-1"><a href="{{:url('admin/index')}}"><i class="fa fa-circle-o"></i>管理员列表</a></li>
+                    <li id="m-7-2"><a href="{{:url('role/index')}}"><i class="fa fa-circle-o"></i>角色列表</a></li>
+                    <li id="m-7-3"><a href="{{:url('permissioin/index')}}"><i class="fa fa-circle-o"></i>权限列表</a></li>
                 </ul>
             </li>
         </ul>
